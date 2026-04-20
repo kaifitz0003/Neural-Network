@@ -1,3 +1,8 @@
+"""
+The code below trains a simple neural network on the Iris datraset.
+
+First, the dataset is split into training and testing data.
+"""
 from numpy import unique
 import matplotlib.pyplot as plt
 from torch.nn.modules import loss
