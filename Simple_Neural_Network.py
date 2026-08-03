@@ -28,7 +28,7 @@ dl_train = DataLoader(ds_train, batch_size=8, shuffle=True)
 dl_test = DataLoader(ds_test, batch_size=8, shuffle=False)
 
 N,F = X.shape
-model = nn.Sequential(nn.Linear(F, 16), nn.ReLU(), nn.Linear(16, n_classes))
+model = nn.Sequential(nn.Linear(F, 16), nn.ReLU(), nn.Linear(16, n_classes)) # There is no activation on the last layer because it is included in the CrossEntropyLoss()
 loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 model.train()
